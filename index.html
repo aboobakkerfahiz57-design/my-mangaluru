@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Mangaluru | Discover the City</title>
+
+<meta name="description"
+content="Discover Mangaluru — places, food, businesses, events, education and everything that makes our city special.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#071313;
+    color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 7%;
+
+    background:rgba(5,15,15,.65);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#55d6be;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 7% 70px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(2,15,15,.95),
+        rgba(2,15,15,.55),
+        rgba(2,15,15,.35)
+    ),
+    url("mangaluru.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.tag{
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border:1px solid rgba(85,214,190,.5);
+    border-radius:30px;
+
+    color:#55d6be;
+
+    font-size:13px;
+
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(48px,8vw,92px);
+
+    line-height:.95;
+
+    margin-bottom:25px;
+}
+
+h1 span{
+    color:#55d6be;
+}
+
+.hero p{
+    max-width:620px;
+
+    color:#c7d0ce;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 24px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    margin-right:10px;
+
+    transition:.3s;
+}
+
+.primary{
+    background:#55d6be;
+    color:#041211;
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.25);
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 7%;
+}
+
+.section-title{
+    font-size:42px;
+
+    margin-bottom:12px;
+}
+
+.section-subtitle{
+    color:#9eaaa7;
+
+    margin-bottom:40px;
+}
+
+/* CATEGORY GRID */
+
+.grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
+
+    gap:18px;
+}
+
+.card{
+    padding:28px;
+
+    min-height:170px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+
+    border-color:#55d6be;
+}
+
+.icon{
+    font-size:35px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#9eaaa7;
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+/* CITY STAT */
+
+.stats{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+}
+
+.stat{
+    padding:30px;
+
+    text-align:center;
+
+    background:#0c2020;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.stat strong{
+    display:block;
+
+    font-size:35px;
+
+    color:#55d6be;
+
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 7%;
+
+    text-align:center;
+
+    background:#040c0c;
+
+    color:#7f8b89;
+
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        padding:17px 5%;
+    }
+
+    nav div:last-child{
+        display:none;
+    }
+
+    .hero{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    h1{
+        font-size:55px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        MY <span>MANGALURU</span>
+    </div>
+
+    <div>
+        <a href="#explore">Explore</a>
+        <a href="#city">City</a>
+        <a href="#about">About</a>
+    </div>
+
+</nav>
+
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            YOUR CITY. YOUR STORY.
+        </div>
+
+        <h1>
+            Discover<br>
+            <span>Mangaluru.</span>
+        </h1>
+
+        <p>
+            Explore the places, people, food, businesses,
+            culture and experiences that make Mangaluru
+            special.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#explore" class="btn primary">
+                Explore the City
+            </a>
+
+            <a href="#city" class="btn secondary">
+                Discover More
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section id="explore">
+
+    <h2 class="section-title">
+        Explore Mangaluru
+    </h2>
+
+    <p class="section-subtitle">
+        Everything you need to discover the city.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">🌊</div>
+            <h3>Beaches</h3>
+            <p>
+                Discover beautiful coastal destinations
+                around Mangaluru.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🍽️</div>
+            <h3>Food</h3>
+            <p>
+                Find local cuisine, restaurants,
+                cafes and hidden food spots.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏢</div>
+            <h3>Businesses</h3>
+            <p>
+                Discover local businesses and
+                services around the city.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Education</h3>
+            <p>
+                Colleges, courses, institutions
+                and student resources.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎉</div>
+            <h3>Events</h3>
+            <p>
+                Find what's happening in Mangaluru
+                today and this weekend.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Real Estate</h3>
+            <p>
+                Explore properties, homes, land
+                and commercial spaces.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="city">
+
+    <h2 class="section-title">
+        Our City
+    </h2>
+
+    <p class="section-subtitle">
+        A city where the coast meets culture.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>🌴</strong>
+            Coastal City
+        </div>
+
+        <div class="stat">
+            <strong>🌊</strong>
+            Arabian Sea
+        </div>
+
+        <div class="stat">
+            <strong>❤️</strong>
+            Local Stories
+        </div>
+
+        <div class="stat">
+            <strong>∞</strong>
+            Experiences
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <h2 class="section-title">
+        More Than A Website.
+    </h2>
+
+    <p class="section-subtitle">
+
+        My Mangaluru is designed to become a digital
+        home for our city — connecting people,
+        places, businesses and experiences in one
+        modern platform.
+
+    </p>
+
+</section>
+
+
+<footer>
+
+    © 2026 My Mangaluru
+
+    <br><br>
+
+    Built for the people of Mangaluru.
+
+</footer>
+
+</body>
+</html>
